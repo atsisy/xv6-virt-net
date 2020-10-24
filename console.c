@@ -123,6 +123,14 @@ panic(char *s)
     ;
 }
 
+void
+assert(char cond)
+{
+  if (!cond) {
+    panic("assert!!");
+  }
+}
+
 //PAGEBREAK: 50
 #define BACKSPACE 0x100
 #define CRTPORT 0x3d4
